@@ -1,10 +1,9 @@
+//Meghan Hom
+//User inputs rock, paper, scissors, or bomb (bomb is the secret cheat code to auto win!)
 var userInput = 'Rock';
 userInput = userInput.toLowerCase();
-var userInput = 'Paper';
-userInput = userInput.toLowerCase();
-var userInput = 'Scissors';
-userInput = userInput.toLowerCase();
 
+//Computer choice
 function getComputerChoice() {
   var randomNumber = Math.floor(Math.random() * 3);
   switch(randomNumber) {
@@ -17,6 +16,7 @@ function getComputerChoice() {
   }
 }
 
+//Determines the winner of the game
 function determineWinner(userChoice, computerChoice) {
   if  (userChoice === computerChoice) {
     return 'it\'s a tie!'
@@ -40,6 +40,9 @@ function determineWinner(userChoice, computerChoice) {
     } else {
       return 'computer wins!';
     }
+  }
+  if (userChoice === 'bomb') {
+    return 'cheat code! You win!!!';
   }
 }
 
